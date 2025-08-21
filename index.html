@@ -44,7 +44,7 @@
     main{display:grid;grid-template-columns: 1.2fr .8fr;gap:24px;padding:24px}
 
     /* Section styling similar to LinkedIn cards */
-    section{background:#fff;border:1px solid var(--border);border-radius:10px}
+    section{background:#fff;border:1px solid var(--border);border-radius:10px;margin-bottom:20px}
     section .sec-h{
       display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid var(--border);font-weight:700;letter-spacing:.2px;text-transform:uppercase;font-size:12px;color:#2d2d2d
     }
@@ -74,7 +74,7 @@
       .contact{margin:0}
       header{flex-direction:column;align-items:flex-start}
     }
-    .actions{display:flex;gap:10px;position:absolute;right:20px;bottom:20px}
+    .actions{display:flex;gap:10px;position:sticky;bottom:20px;right:20px;justify-content:flex-end;z-index:10;margin-top:20px}
     .btn{background:var(--li-blue);color:#fff;border:none;border-radius:8px;padding:8px 12px;font-weight:600;cursor:pointer}
     .btn:hover{background:var(--li-blue-600)}
     .btn.sec{background:transparent;color:var(--li-blue);border:1px solid rgba(10,102,194,.4)}
@@ -111,10 +111,6 @@
             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             585 Rochfords Gardens, Slough, UK
           </span>
-        </div>
-        <div class="actions print-hide">
-          <button class="btn" onclick="window.print()">Print / Save PDF</button>
-          <a class="btn sec" href="#" onclick="window.scrollTo({top:0, behavior:'smooth'});return false;">Back to Top</a>
         </div>
       </header>
 
@@ -239,7 +235,9 @@
           </section>
         </div>
       </main>
+      <div class="actions print-hide">
+        <button class="btn" onclick="window.print()">Print / Save PDF</button>
+        <a class="btn sec" href="#" onclick="window.scrollTo({top:0, behavior:'smooth'});return false;">Back to Top</a>
+      </div>
     </div>
-  </div>
-</body>
-</html>
+  </
